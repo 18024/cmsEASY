@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+	<link rel="stylesheet" type="text/css" href="../../js/bootstrap-3.3.7-dist/css/font-awesome.css"/>
+    <!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="../../js/echarts.min.js"></script>
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" type="text/css" href="tongyong.css"/>
+	<style type="text/css">
+		.right-content {
+			padding: 40px 20px;
+			background: #424b4f;
+			margin-bottom: 20px;
+		}
+		.right-content .left {
+			color: #fff;
+			font-size: 20px;
+			font-weight: 400;
+		}
+		.right-content .left small {
+			font-weight: normal;
+			line-height: 1;
+			color: #B3B3B3;
+		}
+		.right-content .left p {
+			color: #e6e6e6;
+			margin-top: 4px;
+			margin-bottom: 0;
+			font-size: 14px;
+		}
+		.right-button:hover {
+			background: #fff;
+			color: #000;
+		}
+		.right-button {
+			transition: all 0.4s ease-in-out;
+			opacity: 0.3;
+			float: right;
+			outline: none;
+			border: 1px solid #fff;
+			padding: 16px 36px;
+			font-size: 23px;
+			line-height: 23px;
+			border-radius: 0;
+			padding-top: 14px;
+			color: #fff;
+			background-color: rgba(0, 0, 0, 0);
+			font-weight: 500;
+		}
+		.tubiao-ts {
+			background: #424b4f;
+			padding: 0;
+			width: 96%;
+			margin-bottom: 20px;
+		}
+		.tubiao-left p{
+			padding: 15px;
+			color: #fff;
+			margin: 0;
+			border-bottom: 1px solid #000;
+		}
+		.cont-left {
+			height: 1579px;
+		}
+	</style>
+  </head>
+  <body>
+	<header>
+		<div class="logo"  style="display: inline-block;float: left;"><img src="../../img/img/logo.png" ></div>
+		<div class="nav" style="display: inline-block;float: left;">
+			<div class="left">
+				<div class="anniu pull-left">
+					<button class="glyphicon glyphicon-list" style="margin: 15px 0 0 15px; color: #fff;border: none; background: #000000;font-size: 22px;"></button>
+				</div>
+				
+				<form class=" pull-left hidden-xs">
+					<button class="icon-search" style="background: #2f3638; color: #ccc; border: none;"></button>
+					<input style="background: #2f3638; border: none;"placeholder="搜索内容" type="text">
+				</form>
+			</div>
+			<div class="right pull-right">
+				<a href="#" class=" hidden-xs" style="margin-right: 20px;">欢迎你, Amaze UI</a>
+				<i class="icon-envelope-alt" style="color: #fff;"><span  class="span1">4</span></i>
+				<i class="icon-bell-alt" style="color: #fff;"><span class="span">5</span></i>
+				<a href="#"><i class=" icon-signin" style="margin-right: 5px;"></i>退出</a>
+			</div>
+		</div>
+	</header>
+	<div class="content">
+		<div class="cont-left pull-left">
+			<div class="cont-head">
+				<div>
+					<img src="../../img/img/user04.png" alt="">
+				</div>
+				<div class="p1">
+					<i></i>
+					禁言小张
+				</div>
+				<div class="p2"><span></span> 账号设置</div>
+			</div>
+			<ul class="list">
+				<li class="ts">Components 
+					<span> 附加组件</span>
+				</li>
+				<li class="li">
+					<a href="首页.html" class="active">
+						<i class=" icon-github-alt"></i> 首页
+					</a>
+				</li>
+				<li class="li">
+					<a href="表格.html" class="active">
+						<i class=" icon-github-alt"></i> 表格
+					</a>
+				</li>
+				<li class="li">
+					<a href="日历.html" class="active">
+						<i class=" icon-github-alt"></i> 日历
+					</a>
+				</li>
+				<li class="li">
+					<a href="表单.html" class="active">
+						<i class=" icon-github-alt"></i> 表单
+					</a>
+				</li>
+				<li class="li">
+					<a href="图表.html" class="active">
+						<i class=" icon-github-alt"></i> 图表
+					</a>
+				</li>
+				<li class="ts">Page 
+					<span> 常用页面</span>
+				</li>
+				<li class="li1"><i class=" icon-github-alt i-ts"></i>最新消息 <span class="caret"></span>
+					<ol class="list1">
+						<li><span>></span>公司新闻</li>
+						<li><span>></span>精彩活动</li>
+					</ol>
+				</li>
+				<li class="li">
+					<a href="注册.html" class="active">
+						<i class=" icon-github-alt"></i> 注册
+					</a>
+				</li>
+				<li class="li">
+					<a href="登录.html" class="active">
+						<i class=" icon-github-alt"></i> 登录
+					</a>
+				</li>
+				<li class="li">
+					<a href="404.html" class="active">
+						<i class=" icon-github-alt"></i> 404错误
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="cont-right pull-right">
+			<div class="container-fluid right-content">
+					<div class="row">
+						<div class="col-md-9 left">
+							<div>
+								<span class="icon-desktop"></span>   图表   
+								<small>Amaze UI</small>
+							</div>
+							<p>图表组件使用的是百度图表echarts</p>
+						</div>
+						<div class="col-md-3">
+							<button type="button" class="right-button pull-right hidden-xs">
+								<span class="icon-bolt"></span> 设置
+							</button>
+						</div>
+					</div>
+			</div>
+			<div class="container tubiao-ts">
+				<div class="tubiao-left">
+					<p>折线
+						<span class="icon-asterisk pull-right" style="margin-right: 20px;"></span>
+					</p>
+					<div id="main" style="width: 1200px;height:400px;"></div>
+				</div>
+			</div>
+			<div class="container tubiao-ts">
+				<div class="tubiao-left">
+					<p>折线
+						<span class="icon-asterisk pull-right" style="margin-right: 20px;"></span>
+					</p>
+					<div id="main1" style="width: 1200px;height:400px;"></div>
+				</div>
+			</div>
+			<div class="container tubiao-ts">
+				<div class="tubiao-left">
+					<p>折线
+						<span class="icon-asterisk pull-right" style="margin-right: 20px;"></span>
+					</p>
+					<div id="main2" style="width: 1200px;height:400px;"></div>
+				</div>
+			</div>
+		</div>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+  </body>
+  <script type="text/javascript">
+	$(".li1").click(function() {
+		var index = $(this).index(".li1")
+		$(".list1").eq(index).slideToggle()
+	})
+	$(".anniu").click(function(){
+		$(".cont-left").toggleClass("toggle")
+		$(".cont-right").toggleClass("toggle")
+	})
+	var myChart = echarts.init(document.getElementById('main'));
+	var myChart1 = echarts.init(document.getElementById('main1'));
+	var myChart2 = echarts.init(document.getElementById('main2'));
+
+        // 指定图表的配置项和数据
+        option = {
+			title: {
+				text: ''
+			},
+			tooltip : {
+				trigger: 'axis',
+				axisPointer: {
+					type: 'cross',
+					label: {
+						backgroundColor: '#6a7985'
+					}
+				}
+			},
+			legend: {
+				data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
+			},
+			toolbox: {
+				feature: {
+					saveAsImage: {}
+				}
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				bottom: '3%',
+				containLabel: true
+			},
+			xAxis : [
+				{
+					type : 'category',
+					boundaryGap : false,
+					data : ['周一','周二','周三','周四','周五','周六','周日']
+				}
+			],
+			yAxis : [
+				{
+					type : 'value'
+				}
+			],
+			series : [
+				{
+					name:'邮件营销',
+					type:'line',
+					stack: '总量',
+					areaStyle: {},
+					data:[120, 132, 101, 134, 90, 230, 210]
+				},
+				{
+					name:'联盟广告',
+					type:'line',
+					stack: '总量',
+					areaStyle: {},
+					data:[220, 182, 191, 234, 290, 330, 310]
+				},
+				{
+					name:'视频广告',
+					type:'line',
+					stack: '总量',
+					areaStyle: {},
+					data:[150, 232, 201, 154, 190, 330, 410]
+				},
+				{
+					name:'直接访问',
+					type:'line',
+					stack: '总量',
+					areaStyle: {normal: {}},
+					data:[320, 332, 301, 334, 390, 330, 320]
+				},
+				{
+					name:'搜索引擎',
+					type:'line',
+					stack: '总量',
+					label: {
+						normal: {
+							show: true,
+							position: 'top'
+						}
+					},
+					areaStyle: {normal: {}},
+					data:[820, 932, 901, 934, 1290, 1330, 1320]
+				}
+			]
+		};
+		option1 = {
+			title: {
+				text: ''
+			},
+			tooltip: {
+				trigger: 'axis'
+			},
+			legend: {
+				x: 'center',
+				data:['某软件','某主食手机','某水果手机','降水量','蒸发量']
+			},
+			radar: [
+				{
+					indicator: [
+						{text: '品牌', max: 100},
+						{text: '内容', max: 100},
+						{text: '可用性', max: 100},
+						{text: '功能', max: 100}
+					],
+					center: ['25%','40%'],
+					radius: 80
+				},
+				{
+					indicator: [
+						{text: '外观', max: 100},
+						{text: '拍照', max: 100},
+						{text: '系统', max: 100},
+						{text: '性能', max: 100},
+						{text: '屏幕', max: 100}
+					],
+					radius: 80,
+					center: ['50%','60%'],
+				},
+				{
+					indicator: (function (){
+						var res = [];
+						for (var i = 1; i <= 12; i++) {
+							res.push({text:i+'月',max:100});
+						}
+						return res;
+					})(),
+					center: ['75%','40%'],
+					radius: 80
+				}
+			],
+			series: [
+				{
+					type: 'radar',
+					 tooltip: {
+						trigger: 'item'
+					},
+					itemStyle: {normal: {areaStyle: {type: 'default'}}},
+					data: [
+						{
+							value: [60,73,85,40],
+							name: '某软件'
+						}
+					]
+				},
+				{
+					type: 'radar',
+					radarIndex: 1,
+					data: [
+						{
+							value: [85, 90, 90, 95, 95],
+							name: '某主食手机'
+						},
+						{
+							value: [95, 80, 95, 90, 93],
+							name: '某水果手机'
+						}
+					]
+				},
+				{
+					type: 'radar',
+					radarIndex: 2,
+					itemStyle: {normal: {areaStyle: {type: 'default'}}},
+					data: [
+						{
+							name: '降水量',
+							value: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 75.6, 82.2, 48.7, 18.8, 6.0, 2.3],
+						},
+						{
+							name:'蒸发量',
+							value:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 35.6, 62.2, 32.6, 20.0, 6.4, 3.3]
+						}
+					]
+				}
+			]
+		};
+		option2 = {
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					type: 'cross',
+					crossStyle: {
+						color: '#999'
+					}
+				}
+			},
+			toolbox: {
+				feature: {
+					dataView: {show: true, readOnly: false},
+					magicType: {show: true, type: ['line', 'bar']},
+					restore: {show: true},
+					saveAsImage: {show: true}
+				}
+			},
+			legend: {
+				data:['蒸发量','降水量','平均温度']
+			},
+			xAxis: [
+				{
+					type: 'category',
+					data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+					axisPointer: {
+						type: 'shadow'
+					}
+				}
+			],
+			yAxis: [
+				{
+					type: 'value',
+					name: '水量',
+					min: 0,
+					max: 250,
+					interval: 50,
+					axisLabel: {
+						formatter: '{value} ml'
+					}
+				},
+				{
+					type: 'value',
+					name: '温度',
+					min: 0,
+					max: 25,
+					interval: 5,
+					axisLabel: {
+						formatter: '{value} °C'
+					}
+				}
+			],
+			series: [
+				{
+					name:'蒸发量',
+					type:'bar',
+					data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+				},
+				{
+					name:'降水量',
+					type:'bar',
+					data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+				},
+				{
+					name:'平均温度',
+					type:'line',
+					yAxisIndex: 1,
+					data:[2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
+				}
+			]
+		};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+		myChart1.setOption(option1);
+		myChart2.setOption(option2);
+  </script>
+</html>
