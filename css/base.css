@@ -5,6 +5,7 @@
 	background-color: white;
 	border-bottom: 0;
 	box-shadow: 0px 0px 10px #888;
+	margin-bottom: 0;
 }
 .right-nav{
 	position: absolute;
@@ -111,6 +112,8 @@
     background-color: #999;
 }
 .title10 {
+	margin-top: 200px;
+
     text-align: center;
     overflow: hidden;
     margin-bottom: 10px;
@@ -166,7 +169,4 @@
     line-height: 20px;
     height: 60px;
     overflow: hidden;
-}
-.navbar {
-	margin-bottom: 0;
 }
