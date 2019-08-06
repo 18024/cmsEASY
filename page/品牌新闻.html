@@ -3,58 +3,81 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+		<script src="../js/jquery-1.11.1.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<style>
+			.main-title{
+				display: flex;
+				justify-content: space-between;
+				border-bottom: 1px solid #999;
+				align-items: flex-end;
+			}
+			.main-title p{
+				display: flex;
+				justify-content: space-around;
+			}
+			.main-content-head{
+				overflow: hidden;
+			}
+			.main-content-head .print{
+				margin: 20px 0;
+				float: right;
+				width: 125px;
+				background-color: #eeeeee;
+				padding: 0 5px;
+				height: 30px;
+			}
+			.main-content-head .print p{
+				line-height: 30px;
+			}
+			.main-content>p{
+				line-height: 20px;
+			}
+			.main .row>div{
+				padding-left:0;
+			}
+			.main .row>div>div{
+				background-color: #f3f3f3;
+				box-sizing: border-box;
+				padding: 10px;
+				margin-bottom: 20px;
+			}
+			.main .row>div>div img{
+				transition: 0.5s;
+				width: 100%;
+			}
+			.main .row>div>div p{
+				overflow: hidden;
+			}
+			.main .row>div>div p:hover img{
+				transform: scale(1.5);
+			}
+			.main .row div h3{
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			.main .row{
+				margin: 100px 0;
+			}
+			.main .container>span{
+				display: block;
+				width: 30px;
+				height: 36px;
+				background-color: #2ebaef;
+				border-radius: 5px;
+				text-align: center;
+				line-height: 36px;
+				color: white;
+			}
+		</style>
 	</head>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../css/base.css"/>
-	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"/>
-	<style>
-		 h4 {
-			font-size: 26px;
-			color: #000;
-		}
-		.content {
-			padding: 20px 0 0;
-		}
-		.right1-item {
-			padding: 30px;
-		}
-		.right1-item {
-			border-right: 1px solid #999;
-			border-bottom: 1px solid #999;
-		}
-		.right1-img {
-			display: block;
-			overflow: hidden;
-			height: 188px;
-		}
-		.right1-img img {
-			width: 100%;
-			height: 100%;
-			margin: 0 auto;
-			transition: 600ms;
-			object-fit: cover;
-		}
-		.right1-text h4 {
-			text-align: center;
-			font-size: 18px;
-			color: #333;
-			margin-bottom: 0;
-			text-overflow: ellipsis;
-			white-space: nowrap;
-			overflow: hidden;
-		}
-		.right1 {
-			border-left: 1px solid #999;
-		}
-		.pagination {
-			margin: 50px 0;
-		}
-		
-	</style>
 	<body>
-		<!-- 头部导航栏 -->
-			<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -65,23 +88,23 @@
 					</button>
 					<img class="img-responsive" width="180" height="50" src="../img/logo.png" />
 				</div>
-		
+
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li class=""><a href="1.html">网站首页</a></li>
-						<li><a href="关于我们.html">关于我们</a></li>
-						<li class="dropdown active">
+						<li class=""><a href="关于我们.html">关于我们</a></li>
+						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">产品中心
 								<span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="阀门和调压器.html">阀门和调压器</a></li>
 								<li><a href="电气组件.html">电气组件</a></li>
 								<li><a href="控制和安全.html">控制和安全</a></li>
-		
+						
 							</ul>
 						</li>
 						<li class=""><a href="精品案例.html">精品案例</a></li>
-						<li class=""><a href="品牌新闻.html">品牌新闻</a></li>
+						<li class="active"><a href="品牌新闻.html">品牌新闻</a></li>
 						<li class=""><a href="联系方式.html">联系方式</a></li>
 					</ul>
 				</div>
@@ -92,7 +115,7 @@
 				<span class="icon-search"></span>
 			</div>
 		</nav>
-		<!-- 轮播图 -->
+
 		<div class="banner">
 			<div id="myCarousel" class="carousel slide">
 				<!-- 轮播（Carousel）指标 -->
@@ -128,59 +151,67 @@
 					 class="glyphicon glyphicon-chevron-right"></span></a>
 			</div>
 		</div>
-		<div class="container content">
-			<h4 class="pull-left">电气组件</h4>
-			<div class="right pull-right" style="margin-top: 20px;">				
-				所在位置：
-				<a href="#">网站首页</a>
-				/ 
-				<a href="#">产品中心</a>
-				/ 
-				<a href="#">电器组件</a> 
-			</div>
-		</div>
-		<div class="container" style="border-top: 1px solid #999;">
-			<div class="row right1">
-				<div class="col-md-3 col-xs-6">
+
+		<div class="main">
+
+			<div class="container">
+				<div class="main-title">
+					<h3>品牌新闻</h3>	
+					<p>
+						<span>所在位置：</span>
+						<a href="1.html">网站首页</a>
+						&nbsp;&nbsp;/&nbsp;&nbsp;
+						<a href="关于我们.html">品牌新闻</a>
+					</p>
+				</div>
 				<div class="row">
-					<div class="right1-item">
-						<div class="right1-img">
-							<a><img src="../img/15517703619537.jpg"></a>
-						</div>
-						<div class="right1-text">
-							<h4>
-								<a style="color: #000;">调压阀</a>
-							</h4>
-						</div>
+					<div class="col-md-4 col-xs-12">
+						<div>
+							<p><img src="../img/15517716122103.jpg"></p>
+							<h3>回转式格栅除污机</h3>
+							<p>折叠式管道修补器主要应用于管道泄漏的快速修复，可以在不停压、不更换管道的情况下，对老化、锈蚀</p>
+							<a href="">
+								<h4>了解更多</h4>
+							</a>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-3 col-xs-6">
-				<div class="row">
-					<div class="right1-item">
-						<div class="right1-img">
-							<a><img src="../img/15517703171599.jpg"></a>
-						</div>
-						<div class="right1-text">
-							<h4>
-								<a style="color: #000;">数字式阀门控制器</a>
-							</h4>
-						</div>
+					<div class="col-md-4 col-xs-12">
+						<div>
+							<p><img src="../img/15517713703486.jpg"></p>
+							<h3>阀讯科技出口一批CV3000调节阀至巴基斯坦核电外围</h3>
+							<p>cv3000气动调节阀[1]]采用上装式结构，在高压、大口径条件下减少了阀体自身的连接螺栓，增强了阀门</p>
+							<a href="">
+								<h4>了解更多</h4>
+							</a>
 						</div>
 					</div>
+					<div class="col-md-4 col-xs-12">
+						<div>
+							<p><img src="../img/15517716803472.jpg"></p>
+							<h3>折叠式管道修补器|卡箍式管道连接器</h3>
+							<p>折叠式管道修补器主要应用于管道泄漏的快速修复，可以在不停压、不更换管道的情况下，对老化、锈蚀</p>
+							<a href="">
+								<h4>了解更多</h4>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-12">
+						<div>
+							<p><img src="../img/15517716803472.jpg"></p>
+							<h3>北京大兴国际机场</h3>
+							<p>试飞的奖状680校验飞机已经从首都机场起飞，接下来飞机要在大兴国际机场上空完成两次通场飞行，然</p>
+							<a href="">
+								<h4>了解更多</h4>
+							</a>
+						</div>
+					</div>
+					
 				</div>
-				
+				<span>
+					1
+				</span>
 			</div>
 		</div>
-		<div class="container" style="padding: 0 0;margin-bottom: 100px;">
-			<nav>
-				<ul class="pagination">
-				<li class="active"><a>1</a></li>
-				</ul>
-			</nav>
-		</div>
-		
-		<!-- 底部商标 -->
 		<footer>
 			<div class="contact container">
 				<div class="tag">
@@ -197,8 +228,7 @@
 						<div class="col-sm-6 col-md-3">
 							<div class="s8-item">
 								<div class="s8-img">
-									<img src="../img/s8-ico1.png" width="50" height="50"
-									 alt="">
+									<img src="../img/s8-ico1.png" width="50" height="50" alt="">
 								</div>
 								<div class="s8-text">
 									<h4>
@@ -212,8 +242,7 @@
 						<div class="col-sm-6 col-md-3">
 							<div class="s8-item">
 								<div class="s8-img">
-									<img src="../img/s8-ico2.png" width="50" height="50"
-									 alt="">
+									<img src="../img/s8-ico2.png" width="50" height="50" alt="">
 								</div>
 								<div class="s8-text">
 									<h4>
@@ -229,8 +258,7 @@
 						<div class="col-sm-6 col-md-3">
 							<div class="s8-item">
 								<div class="s8-img">
-									<img src="../img/s8-ico3.png" width="50" height="50"
-									 alt="">
+									<img src="../img/s8-ico3.png" width="50" height="50" alt="">
 								</div>
 								<div class="s8-text">
 									<h4>
@@ -244,8 +272,7 @@
 						<div class="col-sm-6 col-md-3">
 							<div class="s8-item">
 								<div class="s8-img">
-									<img src="../img/s8-ico4.png" width="50" height="50"
-									 alt="">
+									<img src="../img/s8-ico4.png" width="50" height="50" alt="">
 								</div>
 								<div class="s8-text">
 									<h4>
@@ -260,21 +287,21 @@
 				</div>
 			</div>
 			<div class="copyright">
-					<div class="container">
-						<div class="row">
-							<p>
-								Copyright <a href="" target="_blank">机械工业鼠标拖拽编辑网页模板</a>,Inc.All rights reserved.&nbsp;&nbsp;<a href="" target="_blank">网站地图</a>
-							</p>
-							<p>
-								<a rel="nofollow" href="" target="_blank">京ICP备88888888号</a>&nbsp;&nbsp;<a rel="nofollow" href="" target="_blank"><img
-									 src="../img/g.png" width="20">京公网安备22000000000001号</a>&nbsp;&nbsp;&nbsp;&nbsp;Powered by <a href="" title=""
-								 target="_blank">CmsEasy</a>&nbsp;&nbsp;<a href="">Rss</a>
-							</p>
-						</div>
+				<div class="container">
+					<div class="row">
+						<p>
+							Copyright <a href="" target="_blank">机械工业鼠标拖拽编辑网页模板</a>,Inc.All rights reserved.&nbsp;&nbsp;<a href="" target="_blank">网站地图</a>
+						</p>
+						<p>
+							<a rel="nofollow" href="" target="_blank">京ICP备88888888号</a>&nbsp;&nbsp;<a rel="nofollow" href="" target="_blank"><img
+								 src="../img/g.png" width="20">京公网安备22000000000001号</a>&nbsp;&nbsp;&nbsp;&nbsp;Powered by <a href="" title=""
+							 target="_blank">CmsEasy</a>&nbsp;&nbsp;<a href="">Rss</a>
+						</p>
 					</div>
+				</div>
 			</div>
 		</footer>
-		<!-- 右侧导航 -->
+
 		<div id="izl_rmenu" class="izl-rmenu">
 			<div class="sbtn btn-qq">
 				<div class="qq"><a rel="nofollow" target="_blank">客服一</a><br><a target="_blank" href="">客服二</a></div>
@@ -288,10 +315,6 @@
 			</div>
 			<div class="sbtn btn-top"></div>
 		</div>
-		
-	<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 	</body>
 	<script src="../js/base.js"></script>
 
