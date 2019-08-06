@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <style type="text/css">
+  	.title:after{
+		content: "";
+		display: block;
+		height: 2px;
+		width: 56px;
+		background: #333;
+		margin: 40px 0;
+	}
+	.title h4 {
+		font-size: 32px;
+		color: #000;
+		margin-bottom: 5px;
+	}
+	.content {
+		padding: 60px 20px;
+	}
+	.cont {
+		margin-top: 20px;
+	}
+	.cont p {
+		font-size: 18px;
+		color: #888;
+		line-height: 2;
+	}
+	.img {
+		margin-top: 20px;
+	}
+	.img img {
+		width: 100%;
+		height: auto;
+	}
+	.content1 {
+		padding-top: 60px;
+		padding-bottom: 20px;
+		background-color: rgb(242, 242, 242);
+	}
+	.s2-img2{
+		width: 79px;
+		height: 79px;
+		border:1px solid #ccc;
+		margin: 0 auto;
+		border-radius: 50%;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+	.cont-title p {
+		position: relative;
+		display: inline-block;
+		padding: 0 15px;
+		color: #666;
+		font-size: 16px;
+	}
+	.cont-title p:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		height: 1px;
+		width: 500px;
+		left: 100%;
+		background: #999;
+	}
+	.cont-title p:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		height: 1px;
+		width: 500px;
+		right: 100%;
+		background: #999;
+	}
+	.cont-title:after {
+		content: "";
+		height: 1px;
+		width: 30px;
+		margin: 10px auto;
+		background: #999;
+		display: block;
+	}
+	.s3-item {
+		margin: 20px 0;
+	}
+	.s3-img {
+		display: block;
+		overflow: hidden;
+	}
+	.s3-img {
+		border: 1px solid #999;
+		border-bottom: none;
+	}
+	.s3-item:hover img {
+		transform: scale(1.1);
+	}
+	.s6-item:hover img {
+		transform: scale(1.1);
+	}
+	.s3-item:hover .s3-text {
+		background: rgba(0,75,147);
+	}
+	.s3-item:hover .s3-text h4{
+		color: #fff;
+	}
+	.s5-item:hover .s5-text h4{
+		color: #fff;
+	}
+	.s3-item:hover .s3-text p{
+		color: #fff;
+	}
+	.s3-img img {
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		transition: 600ms;
+	}
+	.s3-text {
+		padding: 15px 20px;
+		border: 1px solid #999;
+		border-top: none;
+	}
+	.s3-text h4 {
+		font-size: 24px;
+		color: #333;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	.s3-text p {
+		color: #999;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		margin-bottom: 0;
+	}
+	
+	.s6-item {
+		margin: 20px 0;
+		background: #f3f3f3;
+		padding: 15px;
+	}
+	.s6-img {
+		display: block;
+		overflow: hidden;
+	}
+	.s6-img img {
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		transition:0.6s;
+	}
+	.s6-text {
+		padding-top: 10px;
+	}
+	.s6-text h4 {
+		color: #333;
+		font-size: 24px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	.s6-text p {
+		color: #666;
+		line-height: 24px;
+		height: 48px;
+		overflow: hidden;
+		margin: 20px 0;
+	}
+	.s6-text a.more {
+		display: block;
+		font-size: 18px;
+		color: #666;
+		text-align: left;
+	}
+	.s6-text a.more span {
+		float: right;
+		margin: 0 10px;
+		display: block;
+		height: 5px;
+		width: 5px;
+		background: #666;
+		position: relative;
+		border-radius: 50%;
+		margin-top: 12px;
+	}
+	.s6-text a.more span:before {
+		content: "";
+		display: block;
+		position: absolute;
+		height: 5px;
+		width: 5px;
+		background: #666;
+		border-radius: 50%;
+		left: -8px;
+	}
+	.s6-text a.more span:after {
+		content: "";
+		display: block;
+		position: absolute;
+		height: 5px;
+		width: 5px;
+		background: #666;
+		border-radius: 50%;
+		right: -8px;
+	}
+	.s5-title {
+		overflow: hidden;
+		margin-bottom: 10px;
+		height: 309px;
+		overflow: hidden;
+	}
+	.s5-title {
+		margin: 20px 0;
+	}
+	.s5-title h4 {
+		font-size: 36px;
+		color: #333;
+		font-weight: 700;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	.s5-title span {
+		display: block;
+		font-size: 20px;
+		color: #999;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	.s5-title span:after {
+		content: "";
+		height: 1px;
+		width: 30px;
+		margin: 10px 0;
+		background: #999;
+		display: block;
+	}
+	.s5-title p {
+		color: #666;
+		font-size: 18px;
+		margin: 65px 0 0;
+		line-height: 24px;
+		max-height: 72px;
+		overflow: hidden;
+	}
+	.s5-item {
+		margin: 20px 0;
+		padding: 30px;
+		border-radius: 20px;
+		background: #fff;
+		height: 309px;
+		overflow: hidden;
+	}
+	.s5-img {
+		height: 80px;
+		width: 80px;
+		overflow: hidden;
+	}
+	.s5-text {
+		padding-top: 15px;
+	}
+	.s5-text h4 {
+		font-size: 24px;
+		color: #333;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	.s5-text p {
+		color: #999;
+		line-height: 24px;
+		height: 48px;
+		overflow: hidden;
+	}
+	.s5-text a.more {
+		margin: 20px 0;
+		display: block;
+		height: 20px;
+		width: 20px;
+		background: url(../img/s5-more.png) center center no-repeat;
+	}
+	.s5-item:hover {
+		background: #004b8d;
+	}
+  </style>
+  <body>
+    <div id="myCarousel" class="carousel slide">
+		<!-- 轮播（Carousel）指标 -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>   
+		<!-- 轮播（Carousel）项目 -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="../img/banner03.jpg" alt="First slide">
+			</div>
+			<div class="item">
+				<img src="../img/banner03.jpg" alt="Second slide">
+			</div>
+			<div class="item">
+				<img src="../img/banner03.jpg" alt="Third slide">
+			</div>
+		</div>
+		<!-- 轮播（Carousel）导航 -->
+		<a class="carousel-control left" href="#myCarousel" 
+		   data-slide="prev"> <span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span></a>
+		<a class="carousel-control right" href="#myCarousel" 
+		   data-slide="next"><span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></a>
+	</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-6 cont">
+				<div class="title">
+					<h4>关于我们</h4>
+					<p>About</p>
+				</div>
+				<p>勇于完成转型，为客户和股东创造价值。凭借全新充满活力的两大核心聚焦业务——自动化解决方案和商住解决方案，我们正在发挥强有力的优势，以应对日益复杂和不可预测的市场挑战。我们将不断提升短期和长期的价值，继续在过程、工业、商业和住宅市场中成为值得信赖的合作伙伴。是一款基于 PHP+Mysql 架构的网站内容管理系统，也是一个 PHP 开发平台。 采用模块化方式开发，功能易用便于扩展，可面向大中型站点提供重量级网站建设解决方案。3年来，凭借团队长期积累的丰富的Web开发及数据库经验和勇于创新追求完美的设计理念，使得 CmsEasy得到了众多网站的认可，并且越来越多地被应用到大中型商</p>
+			</div>
+			<div class="col-md-6 img">
+				<img src="../img/15517696925063.jpg" >
+			</div>
+		</div>
+	</div>
+	<div class="content1">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-ms-6">
+					<div class="s2-item" style="text-align: center;padding-top: 20px;">
+						<div class="s2-img2">
+							<a title="数据统计"><img style="border-radius: 50%;" src="../img/15517701286112.png"></a>
+						</div>
+						<div class="s2-text">
+							<h4 style="margin: 30px 0 10px 0;"><a title="数据统计"><font style="color: #000; font-size: 22px;">数据统计</font></a></h4>
+							<p style="height: 48px;margin-bottom: 0;"></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-ms-6">
+					<div class="s2-item" style="text-align: center;padding-top: 20px;">
+						<div class="s2-img2">
+							<a title="数据统计"><img style="border-radius: 50%;" src="../img/15517701115487.png"></a>
+						</div>
+						<div class="s2-text">
+							<h4 style="margin: 30px 0 10px 0;"><a title="数据统计"><font style="color: #000; font-size: 22px;">数据统计</font></a></h4>
+							<p style="height: 48px;margin-bottom: 0;"></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-ms-6">
+					<div class="s2-item" style="text-align: center;padding-top: 20px;">
+						<div class="s2-img2">
+							<a title="数据统计"><img style="border-radius: 50%;" src="../img/15517700958383.png"></a>
+						</div>
+						<div class="s2-text">
+							<h4 style="margin: 30px 0 10px 0;"><a title="数据统计"><font style="color: #000; font-size: 22px;">数据统计</font></a></h4>
+							<p style="height: 48px;margin-bottom: 0;"></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-ms-6">
+					<div class="s2-item" style="text-align: center;padding-top: 20px;">
+						<div class="s2-img2">
+							<a title="数据统计"><img style="border-radius: 50%;" src="../img/15517700794211.png"></a>
+						</div>
+						<div class="s2-text">
+							<h4 style="margin: 30px 0 10px 0;"><a title="数据统计"><font style="color: #000; font-size: 22px;">数据统计</font></a></h4>
+							<p style="height: 48px;margin-bottom: 0;"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container" style="padding-top: 60px;padding-bottom: 30px;">
+		<div class="cont-title"style="text-align: center;">
+			<h4 style="color: #333;font-size: 36px;font-weight: bold;">产品中心</h4>
+			<p>HERO PRODUCTS</p>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="s3-item">
+					<div class="s3-img">
+					<img src="../img/15517707106296.jpg">
+					</div>
+					<div class="s3-text">
+					<h4>数字平衡阀</h4>
+					<p>数字平衡阀是在水力工况下，起到动态、静态平衡调节的阀门。数字平衡阀的原理是阀体内的反调节，当入口处压力加大时，自动减小通</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="s3-item">
+					<div class="s3-img">
+					<img src="../img/15517706222490.jpg">
+					</div>
+					<div class="s3-text">
+					<h4>数字平衡阀</h4>
+					<p>数字平衡阀是在水力工况下，起到动态、静态平衡调节的阀门。数字平衡阀的原理是阀体内的反调节，当入口处压力加大时，自动减小通</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="s3-item">
+					<div class="s3-img">
+					<img src="../img/15517705593931.jpg">
+					</div>
+					<div class="s3-text">
+					<h4>数字平衡阀</h4>
+					<p>数字平衡阀是在水力工况下，起到动态、静态平衡调节的阀门。数字平衡阀的原理是阀体内的反调节，当入口处压力加大时，自动减小通</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="s3-item">
+					<div class="s3-img">
+					<img src="../img/15517704837593.jpg">
+					</div>
+					<div class="s3-text">
+					<h4>数字平衡阀</h4>
+					<p>数字平衡阀是在水力工况下，起到动态、静态平衡调节的阀门。数字平衡阀的原理是阀体内的反调节，当入口处压力加大时，自动减小通</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="container" style="padding-top: 60px;padding-bottom: 30px;">
+		<div class="cont-title"style="text-align: center;">
+			<h4 style="color: #333;font-size: 36px;font-weight: bold;">精品案例</h4>
+			<p>HERO PRODUCTS</p>
+		</div>
+	</div>
+	<div style="width: 100%;background-color: rgb(248, 248, 248)">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="s5-title">
+					<h4><a>服务支持</a></h4>
+					<span>Service</span>
+					<p>帮你定制属于你的专属计划是一款基于 PHP+Mysql 架构的网站内容管理系统，也是一个&nbsp;PHP&nbsp;开发平台。 采用模块化方式开发，功能易用便于扩展，可面向大中型站点提供重量级网站建</p>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="s5-item">
+						<div class="s5-img">
+						<img src="../img/15517718844414.png">
+						</div>
+						<div class="s5-text">
+						<h4>行业订制</h4>
+						<p>行业定制是指以一个通用实体为原型结合某个指定行业的特定需求做局部修改的过程和案例。行业定制往往应用于两个不同的行业之间，</p>
+						<a class="more"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="s5-item">
+						<div class="s5-img">
+						<img src="../img/15517718844414.png">
+						</div>
+						<div class="s5-text">
+						<h4>行业订制</h4>
+						<p>行业定制是指以一个通用实体为原型结合某个指定行业的特定需求做局部修改的过程和案例。行业定制往往应用于两个不同的行业之间，</p>
+						<a class="more"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="s5-item">
+						<div class="s5-img">
+						<img src="../img/15517718844414.png">
+						</div>
+						<div class="s5-text">
+						<h4>行业订制</h4>
+						<p>行业定制是指以一个通用实体为原型结合某个指定行业的特定需求做局部修改的过程和案例。行业定制往往应用于两个不同的行业之间，</p>
+						<a class="more"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="s5-item">
+						<div class="s5-img">
+						<img src="../img/15517718844414.png">
+						</div>
+						<div class="s5-text">
+						<h4>行业订制</h4>
+						<p>行业定制是指以一个通用实体为原型结合某个指定行业的特定需求做局部修改的过程和案例。行业定制往往应用于两个不同的行业之间，</p>
+						<a class="more"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="s5-item">
+						<div class="s5-img">
+						<img src="../img/15517718844414.png">
+						</div>
+						<div class="s5-text">
+						<h4>行业订制</h4>
+						<p>行业定制是指以一个通用实体为原型结合某个指定行业的特定需求做局部修改的过程和案例。行业定制往往应用于两个不同的行业之间，</p>
+						<a class="more"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="s5-item">
+						<div class="s5-img">
+						<img src="../img/15517718844414.png">
+						</div>
+						<div class="s5-text">
+						<h4>行业订制</h4>
+						<p>行业定制是指以一个通用实体为原型结合某个指定行业的特定需求做局部修改的过程和案例。行业定制往往应用于两个不同的行业之间，</p>
+						<a class="more"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="s5-item">
+						<div class="s5-img">
+						<img src="../img/15517718844414.png">
+						</div>
+						<div class="s5-text">
+						<h4>行业订制</h4>
+						<p>行业定制是指以一个通用实体为原型结合某个指定行业的特定需求做局部修改的过程和案例。行业定制往往应用于两个不同的行业之间，</p>
+						<a class="more"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container" style="padding-top: 60px;padding-bottom: 30px;">
+		<div class="cont-title"style="text-align: center;">
+			<h4 style="color: #333;font-size: 36px;font-weight: bold;">品牌新闻</h4>
+			<p>NEWS</p>
+			<div class="row1">
+				<div class="col-sm-4">
+					<div class="s6-item">
+						<div class="s6-img">
+							<a><img src="../img/15517753184670.jpg"></a>
+						</div>
+						<div class="s6-text">
+							<h4><a>加速阀门制造业转型晋级 人工智逐渐晋级</a></h4>
+							<p style="padding: 0 0;">人工智能+阀门制造是归于主动化出产转型晋级必不可少的项目。美国、德国、日本等人工智能制造现已处于世界领先水平，我国近年来</p>
+							<a class="more"><span></span>了解更多</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="s6-item">
+						<div class="s6-img">
+							<a><img src="../img/15517753102380.jpg"></a>
+						</div>
+						<div class="s6-text">
+							<h4><a>加速阀门制造业转型晋级 人工智逐渐晋级</a></h4>
+							<p style="padding: 0 0;">人工智能+阀门制造是归于主动化出产转型晋级必不可少的项目。美国、德国、日本等人工智能制造现已处于世界领先水平，我国近年来</p>
+							<a class="more"><span></span>了解更多</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="s6-item">
+						<div class="s6-img">
+							<a><img src="../img/15517753028598.jpg"></a>
+						</div>
+						<div class="s6-text">
+							<h4><a>加速阀门制造业转型晋级 人工智逐渐晋级</a></h4>
+							<p style="padding: 0 0;">人工智能+阀门制造是归于主动化出产转型晋级必不可少的项目。美国、德国、日本等人工智能制造现已处于世界领先水平，我国近年来</p>
+							<a class="more"><span></span>了解更多</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="width: 100%;background-color: rgb(228, 228, 228)">
+		<div class="container" style="padding-top: 60px;padding-bottom: 30px;">
+			<div class="cont-title"style="text-align: center;">
+				<h4 style="color: #333;font-size: 36px;font-weight: bold;">合作伙伴</h4>
+				<p></p>
+			</div>
+			
+			
+		</div>
+	</div>
+	
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+  </body>
+  <script type="text/javascript">
+  	
+  </script>
+</html>
