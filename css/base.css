@@ -167,3 +167,6 @@
     height: 60px;
     overflow: hidden;
 }
+.navbar {
+	margin-bottom: 0;
+}

@@ -10,6 +10,8 @@
 		<!-- Bootstrap -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"/>
+
 		<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
 		<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
 		<!--[if lt IE 9]>
@@ -380,6 +382,11 @@
 			background:rgb(228, 228, 228);
 			
 		}
+		@media screen and (max-width:768px) {
+			#bs-example-navbar-collapse-1 {
+				z-index: 9999;position: relative;background: #fff;
+			}
+		}
 		@media screen and (max-width:1200px) {
 			.cont-title p:after {
 				width: 0 !important;
@@ -388,7 +395,6 @@
 				width: 0 !important;
 			}
 		}
-		
 	</style>
 	<body>
 		<nav class="navbar navbar-default">
@@ -400,26 +406,26 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<img class="img-responsive" width="180" height="50" src="../img/logo.png" />
+					<img class="img-responsive" width="180" height="50" src="../img/logo.png"/>
 				</div>
 
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="index.html">网站首页</a></li>
-						<li class=""><a href="index.html">关于我们</a></li>
+						<li class="active"><a href="1.html">网站首页</a></li>
+						<li class=""><a href="关于我们.html">关于我们</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">产品中心
 								<span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="">阀门和调压器</a></li>
-								<li><a href="">电气组件</a></li>
-								<li><a href="">控制和安全</a></li>
+								<li><a href="阀门和调压器.html">阀门和调压器</a></li>
+								<li><a href="电气组件.html">电气组件</a></li>
+								<li><a href="控制和安全.html">控制和安全</a></li>
 
 							</ul>
 						</li>
-						<li class=""><a href="index.html">精品案例</a></li>
-						<li class=""><a href="index.html">品牌新闻</a></li>
-						<li class=""><a href="index.html">联系方式</a></li>
+						<li class=""><a href="精品案例.html">精品案例</a></li>
+						<li class=""><a href="品牌新闻.html">品牌新闻</a></li>
+						<li class=""><a href="联系方式.html">联系方式</a></li>
 					</ul>
 				</div>
 			</div>
@@ -590,6 +596,19 @@
 					<h4 style="color: #333;font-size: 36px;font-weight: bold;">精品案例</h4>
 					<p>HERO PRODUCTS</p>
 				</div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img style="width: 262.5px;" src="../img/15517716803472.jpg" ></div>
+						<div class="swiper-slide"><img style="width: 262.5px;" src="../img/15517716539924.jpg" ></div>
+						<div class="swiper-slide"><img style="width: 262.5px;" src="../img/15517716122103.jpg" ></div>
+						<div class="swiper-slide"><img style="width: 262.5px;" src="../img/15517713703486.jpg" ></div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+							
 			</div>
 			<div style="width: 100%;background-color: rgb(248, 248, 248)">
 				<div class="container">
@@ -731,8 +750,8 @@
 						<h4 style="color: #333;font-size: 36px;font-weight: bold;">合作伙伴</h4>
 						<p></p>
 					</div>
-					<div class="swiper-container">
-						<div class="swiper-wrapper">
+					<div class="swiper-container swiper">
+						<div class="swiper-wrapper s4-img">
 							<div class="swiper-slide"><img src="../img/15517724864266.png" ></div>
 							<div class="swiper-slide"><img src="../img/15517725021203.png" ></div>
 							<div class="swiper-slide"><img src="../img/15517725152147.png" ></div>
@@ -875,7 +894,19 @@
 
 	</body>
 	<script>
-		var swiper = new Swiper('.swiper-container', {
+
+		var swiper1 = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			slidesPerView: 4,
+			paginationClickable: true,
+			spaceBetween: 30,
+			loop: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			}
+		});
+		var swiper = new Swiper('.swiper', {
 			pagination: '.swiper-pagination',
 			slidesPerView: 5,
 			paginationClickable: true,
@@ -885,7 +916,6 @@
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
 			}
-
 		});
 	</script>
 </html>
